@@ -4,7 +4,7 @@
 ## Part A. Solder your LCD panel
 
 **Take a picture of your soldered panel and add it here!**
-![LCD Setup]()
+![LCD Setup](https://github.com/mkc233/IDD-Fa19-Lab2/blob/master/LcdDisplay.jpg)
 
 ## Part B. Writing to the LCD
  
