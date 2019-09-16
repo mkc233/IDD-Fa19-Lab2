@@ -4,6 +4,7 @@
 ## Part A. Solder your LCD panel
 
 **Take a picture of your soldered panel and add it here!**
+![LCD Setup]()
 
 ## Part B. Writing to the LCD
  
