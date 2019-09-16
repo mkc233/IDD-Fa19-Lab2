@@ -9,15 +9,47 @@ Include your responses to the bold questions below. Include snippets of code tha
 ## Part B. Writing to the LCD
  
 **a. What voltage level do you need to power your display?**
+I need 5 volts to power the display, per the schematic it also says the operating voltage is 5 volts at the VDD.
 
 **b. What voltage level do you need to power the display backlight?**
+Per directions in this lab it seems to be able to be powered by 3.3 volts.  
    
 **c. What was one mistake you made when wiring up the display? How did you fix it?**
+I didn't make any mistake wiring wise it was able to turn on the display on the first try.  However, my wiring is very messing it would probably be better next time to plan on the wiring to make it easier to troubleshoot.
 
 **d. What line of code do you need to change to make it flash your name instead of "Hello World"?**
- 
-**e. Include a copy of your Lowly Multimeter code in your lab write-up.**
+I need to change the lcd.print() and add the string "Michael"
 
+**e. Include a copy of your Lowly Multimeter code in your lab write-up.**
+```
+// include the library code:
+#include <LiquidCrystal.h>
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+int sensorPin = A0;    // select the input pin for the potentiometer
+int sensorValue = 0;  // variable to store the value coming from the sensor
+
+void setup() {
+    // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  lcd.print("Lowly Multimeter");
+}
+
+void loop() {
+  // read the value from the sensor:
+  sensorValue = analogRead(sensorPin);
+  // set the cursor to column 0, line 1
+  // (note: line 1 is the second row, since counting begins with 0):
+  lcd.setCursor(0, 1);
+  // print the voltage
+  lcd.print(sensorValue);
+}
+```
 
 ## Part C. Using a time-based digital sensor
 
