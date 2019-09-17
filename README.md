@@ -70,6 +70,12 @@ The Star Wars intro song is playing.
 ## Part E. Make your own timer
 
 **a. Make a short video showing how your timer works, and what happens when time is up!**
+
+[Cooking Timer](https://youtu.be/M8FLRsfIUu8)  
+
+Simple cooking timer which asks the user to input the time desired for cooking in seconds by pushing the red button.  Once the user is ready to start the timer, the user will push the white button.  At the end of the countdown, the blue LED will go off and the display will notifity the user that the food is ready to eat.
+
+Cooking Timer Code
 ```
 
 // include the library code:
@@ -132,4 +138,5 @@ if(start == 1){
 }
 }
 ```
+
 **b. Post a link to the completed lab report your class hub GitHub repo.**
